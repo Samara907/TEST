@@ -1,1 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation/DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sample" extends="struts-default">
+		<interceptors>
+			<interceptor name="test" class="test.strust.interceptor.TestInterceptor"></interceptor>
+			<interceptor name="dao" class="test.strust.interceprot.DAOInterceptor"></interceptor>
+		</interceptors>
+		<action name="hello" class="test.struts.action.HelloAction">
+			<interceptor-ref name="dao"></interceptor-ref>
+			<interceptor-ref name="test"></interceptor-ref>
+		</action>
+		<action name="form" class="test.struts.action.FormAction">
+			<result>/1118/form.jsp</result>
+		</action>
+	</package>
+</struts>
