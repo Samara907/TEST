@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<form action="hello.action">
-	name : <input type="text" name = "name"/><br />
-		   <input type="submit" value="전송"/><br />
+    
+<form action="hello.action" method="post" enctype="multipart/form-data">
+	name : <input type="text"   name="filename"  /><br />
+	file : <input type="file"   name="upload"/><br />
+		   <input type="submit" value="전송"  /><br />
 </form>

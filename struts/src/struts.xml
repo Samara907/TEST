@@ -3,13 +3,10 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="sample" extends="struts-default">
-		<interceptors>
-			<interceptor name="test" class="test.strust.interceptor.TestInterceptor"></interceptor>
-			<interceptor name="dao" class="test.strust.interceprot.DAOInterceptor"></interceptor>
-		</interceptors>
 		<action name="hello" class="test.struts.action.HelloAction">
-			<interceptor-ref name="dao"></interceptor-ref>
-			<interceptor-ref name="test"></interceptor-ref>
+			<interceptor-ref name="fileUpload"></interceptor-ref>
+			<interceptor-ref name="params"></interceptor-ref>
+			<result>/1118/index.jsp</result>
 		</action>
 		<action name="form" class="test.struts.action.FormAction">
 			<result>/1118/form.jsp</result>

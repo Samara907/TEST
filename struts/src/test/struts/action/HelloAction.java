@@ -1,16 +1,32 @@
 package test.struts.action;
 
-import test.struts.bean.DAO;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 
 public class HelloAction {
 	
-	private DAO dao = null;
-	public String execute() {
-		System.out.println("execute");
-		return "success";
+	private File upload;
+	private String contentType;
+	private String fileName;
+	
+	public void setUpload(File upload) {
+		this.upload = upload;
+	}
+	public void setUploadContentType(String contentType) {
+		this.contentType = contentType;
+	}
+	public void setUploadFileName(String fileName) {
+		this.fileName = fileName;
 	}
 	
-	public void setDAO(DAO dao) {
-		this.dao = dao;
+	public String execute() throws IOException {
+		File copyFile = new File("E://save//" + fileName);
+		FileUtils.copyFile(upload, copyFile);
+		System.out.println(contentType);
+		System.out.println(upload);
+		System.out.println(fileName);
+		return "success";
 	}
 }
