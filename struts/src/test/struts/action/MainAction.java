@@ -6,7 +6,7 @@ public class MainAction {
 		return "success";
 	}
 	
-	public String getPw() {
+	public String getId() {
 		return "1212";
 	}
 }
