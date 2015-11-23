@@ -5,10 +5,10 @@ import com.opensymphony.xwork2.Preparable; //set
 
 import test.struts.bean.TestDTO;
 
-public class TestAction implements Preparable, ModelDriven{
+public class TestAction implements ModelDriven{
 	
 	
-	private TestDTO dto = null;
+	private static TestDTO dto = new TestDTO();
 	
 	public String form() {
 		return "success";
@@ -24,9 +24,4 @@ public class TestAction implements Preparable, ModelDriven{
 		return dto;
 	}
 
-	@Override
-	public void prepare() throws Exception {
-		// TODO Auto-generated method stub
-		dto = new TestDTO();
-	}
 }
