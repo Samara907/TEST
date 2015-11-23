@@ -3,13 +3,12 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="sample" extends="struts-default">
-		<action name="hello" class="test.struts.action.HelloAction">
-			<interceptor-ref name="fileUpload"></interceptor-ref>
-			<interceptor-ref name="params"></interceptor-ref>
-			<result>/1118/index.jsp</result>
+		<action name="index" class="test.struts.action.IndexAction">
+			<result type="redirect-action">main</result>
 		</action>
-		<action name="form" class="test.struts.action.FormAction">
-			<result>/1118/form.jsp</result>
+		<action name="main" class="test.struts.action.MainAction">
+			<result>/1123/main.jsp</result>
 		</action>
+
 	</package>
 </struts>
