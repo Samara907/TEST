@@ -7,7 +7,7 @@
 <title>/1123/testForm.jsp</title>
 </head>
 <body>
-	<form action="testPro.actiong" method="post">
+	<form action="testPro.action" method="post">
 		id  : <input type="text"	 name="id" /><br />
 		pw  : <input type="password" name="pw" /><br />
 		age : <input type="text"	 name="age"/><br />

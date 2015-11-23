@@ -4,12 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>/1123/main.jsp</title>
+<title>/1123/testPro.jsp</title>
 </head>
 <body>
-	<font size="6">
-		id : ${id }<br />
-		pw : ${pw }<br />
-	</font>
+	<h2>Success Insert Table !!.</h2>
 </body>
 </html>

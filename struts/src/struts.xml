@@ -3,22 +3,13 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="sample" extends="struts-default">
-		<action name="index" class="test.struts.action.IndexAction">
-			<result type="chain">main</result>
-		</action>
-		<action name="main" class="test.struts.action.MainAction">
-			<result>/1123/main.jsp</result>
-		</action>
-		<action name="down" class="test.struts.action.DownAction">
-			<result name="success" type="stream">
-				<param name="inputName">inputStream</param>
-				<param name="contentDisposition">attachment; filename=${fileName}</param>
-			</result>
-		</action>
 		<action name="testForm" class="test.struts.action.TestAction" method="form">
 			<result>/1123/testForm.jsp</result>
 		</action>
-			<action name="testPro" class="test.struts.action.TestAction">
+		<action name="testPro" class="test.struts.action.TestAction">
+			<interceptor-ref name="prepare"></interceptor-ref>
+			<interceptor-ref name="modelDriven"></interceptor-ref>
+			<interceptor-ref name="params"></interceptor-ref>
 			<result>/1123/testPro.jsp</result>
 		</action>
 
