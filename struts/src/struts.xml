@@ -4,7 +4,7 @@
 <struts>
 	<package name="sample" extends="struts-default">
 		<action name="index" class="test.struts.action.IndexAction">
-			<result type="redirect-action">main</result>
+			<result type="chain">main</result>
 		</action>
 		<action name="main" class="test.struts.action.MainAction">
 			<result>/1123/main.jsp</result>
