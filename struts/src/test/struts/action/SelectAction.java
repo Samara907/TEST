@@ -17,7 +17,7 @@ public class SelectAction {
 		Reader reader = Resources.getResourceAsReader("sqlMapConfig.xml");
 		SqlMapClient sqlMapper = SqlMapClientBuilder.buildSqlMapClient(reader);
 		try {
-			List list = sqlMapper.queryForList("testAll");
+			 list = sqlMapper.queryForList("testAll");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

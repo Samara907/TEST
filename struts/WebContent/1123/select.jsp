@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:forEach var="dto" items="${list }">
-	${dto.id }, ${dto.pw }, ${dto.age }, ${dto.reg }
+	${dto.id }, ${dto.pw }, ${dto.age }, ${dto.reg }<br />
 </c:forEach>
 </body>
 </html>
