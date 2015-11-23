@@ -9,6 +9,12 @@
 		<action name="main" class="test.struts.action.MainAction">
 			<result>/1123/main.jsp</result>
 		</action>
+		<action name="down" class="test.struts.action.DownAction">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment; filename=${fileName}</param>
+			</result>
+		</action>
 
 	</package>
 </struts>
