@@ -2,7 +2,7 @@
 <!DOCTYPE sqlMap PUBLIC ".//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
 "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <sqlMap>
-	<insert id="testInsert" parameterClass="test.struts.bean.TestDTO">
-		insert into test values(#id#,#pw#,#age#,sysdate)
-	</insert>
+	<select id="testAll" resultClass="test.struts.bean.TestDTO">
+		select * from test
+	</select>
 </sqlMap>

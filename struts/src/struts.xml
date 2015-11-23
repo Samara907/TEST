@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation/DTD Struts Configuration 2.0//EN"
+<!DOCTYPE struts PUBLIC ".//Apache Software Foundation/DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="sample" extends="struts-default">
-		<action name="testForm" class="test.struts.action.TestAction" method="form">
-			<result>/1123/testForm.jsp</result>
+		<action name="select" class="test.struts.action.SelectAction">
+			<result>/1123/select.jsp</result>
 		</action>
-		<action name="testPro" class="test.struts.action.TestAction">
-			<interceptor-ref name="prepare"></interceptor-ref>
-			<interceptor-ref name="modelDriven"></interceptor-ref>
-			<interceptor-ref name="params"></interceptor-ref>
-			<result>/1123/testPro.jsp</result>
-		</action>
-
 	</package>
 </struts>
