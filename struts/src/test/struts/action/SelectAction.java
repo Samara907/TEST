@@ -18,6 +18,7 @@ public class SelectAction {
 		SqlMapClient sqlMapper = SqlMapClientBuilder.buildSqlMapClient(reader);
 		try {
 			 list = sqlMapper.queryForList("testAll");
+			// String list = (String) sqlMapper.queryForObject("testAll");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
