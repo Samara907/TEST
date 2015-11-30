@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HelloBean {
 	
-	@RequestMapping(value="/test.do",method=RequestMethod.POST)
+	@RequestMapping(value="/test.do",method=RequestMethod.GET)
 	public String test() {
 		return "/1130/test.jsp";
 	}
