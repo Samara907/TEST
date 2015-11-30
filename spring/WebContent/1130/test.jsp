@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Hello Spring -->> ${dto.msg }</h2>
+	<h2>Hello Spring -->> ${msg }</h2>
 </body>
 </html>
