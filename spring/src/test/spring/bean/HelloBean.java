@@ -13,6 +13,7 @@ public class HelloBean {
 	//@RequestMapping(value="/test.do",method=RequestMethod.POST)
 	public String test(HttpServletRequest request, HttpSession session) {
 		request.setAttribute("msg", "javajavajava");
+		System.out.println("hello adviece");
 		return "/1130/test.jsp";
 	}
 }
