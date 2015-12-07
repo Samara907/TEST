@@ -1,12 +1,10 @@
 package test.spring.bean;
 
 import java.io.File;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -14,10 +12,12 @@ public class HelloBean {
 	
 	@RequestMapping("/test.do")
 	//@RequestMapping(value="/test.do",method=RequestMethod.POST)
-	public String test(HttpServletRequest request, HttpSession session) {
-		request.setAttribute("msg", "javajavajava");
-		System.out.println("hello adviece");
-		return "/1130/test.jsp";
+	public String test(MultipartHttpServletRequest request) throws Exception {
+		MultipartFile file = request.getFile("upload");
+		String name = file.getOriginalFilename();
+		File sf = new File("e://save//" + name);
+		file.transferTo(sf);
+		return "/test/fileupload.jsp";
 	}
 	
 	/**
